@@ -12,7 +12,7 @@ jobs:
   # 이 workflow 는 "deploy" 라는 single job 으로 구성
   deploy:
     # job이 실행될 환경 - 최신 mac os
-    runs-on: macos-latest
+    runs-on: macos-14
     env:
       # app archive 및 export 에 쓰일 환경 변수 설정
       XC_WORKSPACE: ${{ 'AutoRelease/AutoRelease.xcodeproj' }}
