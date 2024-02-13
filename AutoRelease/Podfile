@@ -1,0 +1,99 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+use_frameworks!
+platform :ios, '15.0'
+
+
+def google_utilites
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Analytics'
+  pod 'FirebaseDynamicLinks'
+end
+
+def pp_app_frameworks
+  
+  google_utilites
+  
+  
+  # Alamofire
+  pod 'Alamofire'
+  pod 'AlamofireImage', '~> 4.1'
+  
+  # Swifty
+  pod 'SwiftyJSON'
+  
+  # FSCalendar
+  pod 'FSCalendar'
+  
+  #Kingfisher
+  pod 'Kingfisher'
+  
+  #album image multi select
+  pod 'Tatsi'
+  
+  #IMG.ly Video Editor
+  pod 'VideoEditorSDK'
+  pod 'PhotoEditorSDK'
+  
+  # 카카오
+  pod 'KakaoSDKUser'
+  pod 'KakaoSDKTalk'
+  
+  pod 'KakaoMapsSDK'
+
+  
+  # 네이버 로그인
+  pod 'naveridlogin-sdk-ios'
+  
+  # 구글 로그인
+  pod 'GoogleSignIn', '~> 6.2.4'
+  
+  # 페이스북 로그인
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+  pod 'FBAudienceNetwork'
+  
+  # 톡 플러스 채팅
+  pod 'talkplus-ios'
+  
+  # appsflyer
+  pod 'AppsFlyerFramework'
+  
+  # Lottie
+  pod 'lottie-ios'
+  
+  # SnapKit
+  pod 'SnapKit', '~> 5.6.0'
+  
+  #RxSwift
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  
+  #SwiftUI
+  pod 'SwiftUIIntrospect'
+  pod 'SwiftUIPager'
+
+end
+
+target 'AutoRelease' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  pp_app_frameworks
+  google_utilites
+  # Pods for AutoRelease
+end
+
+post_install do |installer|
+  installer.generated_projects.each do |project|
+    project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
+      end
+    end
+  end
+end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B86BE9E3FFB124DE4C6FF5A /* Pods_AutoRelease.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC1DCB49E4CBA39D06A73F0 /* Pods_AutoRelease.framework */; };
 		B10EFC7E2B7B13A500651CEC /* AutoReleaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10EFC7D2B7B13A500651CEC /* AutoReleaseApp.swift */; };
 		B10EFC802B7B13A500651CEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10EFC7F2B7B13A500651CEC /* ContentView.swift */; };
 		B10EFC822B7B13A600651CEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B10EFC812B7B13A600651CEC /* Assets.xcassets */; };
@@ -14,11 +15,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3DC1DCB49E4CBA39D06A73F0 /* Pods_AutoRelease.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoRelease.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B10EFC7A2B7B13A500651CEC /* AutoRelease.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoRelease.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B10EFC7D2B7B13A500651CEC /* AutoReleaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoReleaseApp.swift; sourceTree = "<group>"; };
 		B10EFC7F2B7B13A500651CEC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B10EFC812B7B13A600651CEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B10EFC842B7B13A600651CEC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D99BF47B596A9317ADDB2285 /* Pods-AutoRelease.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoRelease.debug.xcconfig"; path = "Target Support Files/Pods-AutoRelease/Pods-AutoRelease.debug.xcconfig"; sourceTree = "<group>"; };
+		E2F0214233E68E06AAAD65C1 /* Pods-AutoRelease.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoRelease.release.xcconfig"; path = "Target Support Files/Pods-AutoRelease/Pods-AutoRelease.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +30,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B86BE9E3FFB124DE4C6FF5A /* Pods_AutoRelease.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FC6E288DDDEEB20EFCD1B13 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DC1DCB49E4CBA39D06A73F0 /* Pods_AutoRelease.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B10EFC712B7B13A500651CEC = {
 			isa = PBXGroup;
 			children = (
 				B10EFC7C2B7B13A500651CEC /* AutoRelease */,
 				B10EFC7B2B7B13A500651CEC /* Products */,
+				F9E65404ED8B72DD443BE798 /* Pods */,
+				0FC6E288DDDEEB20EFCD1B13 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F9E65404ED8B72DD443BE798 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D99BF47B596A9317ADDB2285 /* Pods-AutoRelease.debug.xcconfig */,
+				E2F0214233E68E06AAAD65C1 /* Pods-AutoRelease.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B10EFC882B7B13A600651CEC /* Build configuration list for PBXNativeTarget "AutoRelease" */;
 			buildPhases = (
+				3DE3579164FD5A9CC5EED8E2 /* [CP] Check Pods Manifest.lock */,
 				B10EFC762B7B13A500651CEC /* Sources */,
 				B10EFC772B7B13A500651CEC /* Frameworks */,
 				B10EFC782B7B13A500651CEC /* Resources */,
+				952816C8B3219A786E1DDF45 /* [CP] Embed Pods Frameworks */,
+				A22EA25562B88798A2596B0C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +159,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3DE3579164FD5A9CC5EED8E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AutoRelease-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		952816C8B3219A786E1DDF45 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AutoRelease/Pods-AutoRelease-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AutoRelease/Pods-AutoRelease-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AutoRelease/Pods-AutoRelease-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A22EA25562B88798A2596B0C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AutoRelease/Pods-AutoRelease-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AutoRelease/Pods-AutoRelease-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AutoRelease/Pods-AutoRelease-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B10EFC762B7B13A500651CEC /* Sources */ = {
@@ -266,13 +353,17 @@
 		};
 		B10EFC892B7B13A600651CEC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D99BF47B596A9317ADDB2285 /* Pods-AutoRelease.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AutoRelease/Preview Content\"";
-				DEVELOPMENT_TEAM = KRY967CND6;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = KRY967CND6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -280,6 +371,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,6 +379,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = test.AutoRelease;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = githubaction;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -295,13 +389,17 @@
 		};
 		B10EFC8A2B7B13A600651CEC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2F0214233E68E06AAAD65C1 /* Pods-AutoRelease.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution: Hansol Eom (KRY967CND6)";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AutoRelease/Preview Content\"";
-				DEVELOPMENT_TEAM = KRY967CND6;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = KRY967CND6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -309,6 +407,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,6 +415,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = test.AutoRelease;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = githubaction;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
