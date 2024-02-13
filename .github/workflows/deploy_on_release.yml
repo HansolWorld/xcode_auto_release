@@ -20,13 +20,13 @@ jobs:
       XC_ARCHIVE: ${{ 'AutoRelease.xcarchive' }}
       
       # certificate 
-      ENCRYPTED_CERT_FILE_PATH: ${{ '.github/secrets/certification.p12.gpg' }}
+      ENCRYPTED_CERT_FILE_PATH: ${{ '.github/secrets/Certificates.p12.gpg' }}
       DECRYPTED_CERT_FILE_PATH: ${{ '.github/secrets/certification.p12' }}
       CERT_ENCRYPTION_KEY: ${{ secrets.CERTS_ENCRYPTION_PWD }} # gpg로 파일 암호화할 때 사용한 암호
       
       # provisioning
-      ENCRYPTED_PROVISION_FILE_PATH: ${{ '.github/secrets/AutoRelease_GithubAction.mobileprovision.gpg' }}
-      DECRYPTED_PROVISION_FILE_PATH: ${{ '.github/secrets/AutoRelease_GithubAction.mobileprovision' }}
+      ENCRYPTED_PROVISION_FILE_PATH: ${{ '.github/secrets/Auto.mobileprovision.gpg' }}
+      DECRYPTED_PROVISION_FILE_PATH: ${{ '.github/secrets/Auto.mobileprovision' }}
       PROVISIONING_ENCRYPTION_KEY: ${{ secrets.PROVISION_ENCRYPTION_PWD }} # gpg로 파일 암호화할 때 사용한 암호
       
       # certification export key
