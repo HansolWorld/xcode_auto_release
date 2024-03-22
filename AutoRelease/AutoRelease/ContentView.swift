@@ -7,13 +7,21 @@
 
 import SwiftUI
 
+struct Title {
+    #if DEBUG
+    static var text = "디벨럽으로 올라갔다"
+    #else
+    static var text = "운영으로 올라갔다"
+    #endif
+}
+
 struct ContentView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text(Title.text)
         }
     }
 }
