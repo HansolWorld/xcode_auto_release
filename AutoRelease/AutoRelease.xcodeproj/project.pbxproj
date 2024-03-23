@@ -31,6 +31,8 @@
 		D99BF47B596A9317ADDB2285 /* Pods-AutoRelease.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoRelease.debug.xcconfig"; path = "Target Support Files/Pods-AutoRelease/Pods-AutoRelease.debug.xcconfig"; sourceTree = "<group>"; };
 		DF1E7793C9C88099EC2D5A6F /* Pods_AutoRelease.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoRelease.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2F0214233E68E06AAAD65C1 /* Pods-AutoRelease.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoRelease.release.xcconfig"; path = "Target Support Files/Pods-AutoRelease/Pods-AutoRelease.release.xcconfig"; sourceTree = "<group>"; };
+		FF90CC202BAF1E83006BDC1A /* AutoRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutoRelease.entitlements; sourceTree = "<group>"; };
+		FF90CC212BAF1E8A006BDC1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,8 @@
 		B10EFC7C2B7B13A500651CEC /* AutoRelease */ = {
 			isa = PBXGroup;
 			children = (
+				FF90CC212BAF1E8A006BDC1A /* Info.plist */,
+				FF90CC202BAF1E83006BDC1A /* AutoRelease.entitlements */,
 				B10EFC7D2B7B13A500651CEC /* AutoReleaseApp.swift */,
 				B10EFC7F2B7B13A500651CEC /* ContentView.swift */,
 				B10EFC812B7B13A600651CEC /* Assets.xcassets */,
@@ -397,6 +401,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AutoRelease/AutoRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
@@ -407,7 +412,18 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AutoRelease/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = test;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";
+				INFOPLIST_KEY_NSCameraUsageDescription = test;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = test;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = test;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = test;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = test;
+				INFOPLIST_KEY_NSMotionUsageDescription = test;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = test;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = test;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -439,6 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AutoRelease/AutoRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
@@ -449,7 +466,18 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AutoRelease/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = test;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";
+				INFOPLIST_KEY_NSCameraUsageDescription = test;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = test;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = test;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = test;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = test;
+				INFOPLIST_KEY_NSMotionUsageDescription = test;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = test;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = test;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
