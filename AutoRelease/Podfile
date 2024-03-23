@@ -1,6 +1,16 @@
 use_frameworks!
 platform :ios, '15.0'
 
+def google_utilites
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Analytics'
+  pod 'FirebaseDynamicLinks'
+end
+
 def pp_app_frameworks
   # Alamofire
   pod 'Alamofire'
@@ -63,6 +73,7 @@ def pp_app_frameworks
 end
 
 target 'AutoRelease' do
+  google_utilites
   pp_app_frameworks
 end
 
